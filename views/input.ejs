@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<style>
+  body{
+    background: wheat;
+  }
+</style>
+  <body>
+    <form id="notionForm" class="d-flex justify-content-center align-items-center flex-column">
+        <div class="input-group mb-3"><input placeholder="Page Id Of Notion" type="text" id="notionPageId" name="notionPageId" class="form-control py-4" aria-label="notionPageId" aria-describedby="inputGroup-sizing-default"></div>
+        <div class="input-group mb-3"><input placeholder="WorkspaceName of Confluence" type="text" id="confluenceWorkSpaceName" name="confluenceWorkSpaceName" class="form-control py-4" aria-label="workSpaceName" aria-describedby="inputGroup-sizing-default"></div>
+        <button type="submit" class="btn btn-light w-25 p-3" ><strong>Convert</strong></button>
+      </form>
+
+      <div id="screen">
+        <div id="onSuccess" class="resp">
+          <h5> Congratuallations 🎉</h5>
+          <h4><strong> status: </strong> <span id="successStatus"></span> </h4>
+          <h4><strong> message: </strong> <span id="successMessage"></span> </h4>
+          <h4><strong> Workspace: </strong> <span id="successSpace"></span> </h4>
+        </div> 
+       
+          <div id="onError" class="resp">
+            <h5> Some Error Occurred 🛑</h5>
+              <h4><strong> status: </strong> <span id="errorStatus"></span> </h4>
+             <h4><strong> message: </strong> <span id="errorMessage"></span> </h4>
+           </div> 
+        
+      </div>
+
+</body>
+</html>
